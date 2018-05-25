@@ -1,0 +1,241 @@
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <title>Leonardo Bertazzoni</title>
+        <style>
+            body{
+                background-color: floralwhite;
+                margin: 0 auto;
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            h1{
+                color: orange;
+                text-align: center;
+            }
+            h2{
+                color: cornflowerblue;
+                text-align: center;
+            }
+            h3{
+                color: orange;
+                text-align: center;
+            }
+            h4{
+                color: orange;
+                text-align: center;
+            }
+            p{
+                color: black;
+                text-align: center;
+            }
+            img{
+                display: block;
+                margin: 0 auto;
+            }
+            b{
+                color: orange;
+            }
+            ul{
+                text-align: center;
+            }
+            hr{
+                border: 0;
+                height: 5px;
+                background-image: linear-gradient(to right, rgba(255, 255, 255, 0), cornflowerblue, rgba(255, 255, 255, 0));
+            }
+            #info{
+                background-color: orange;
+                border: 1px solid orange;
+                box-shadow: 10px 10px 5px grey;
+                width: 400px;
+                display: block;
+                margin: 0 auto;
+                border-radius: 4px;
+            }
+            .navbar {
+                overflow: hidden;
+                background-color: cornflowerblue;
+                box-shadow: 10px 10px 5px grey;
+            }
+            .navbarDx {
+                float: right;
+            }
+            .navbar a {
+                float: left;
+                display: block;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+            }
+            .navbar a:hover {
+                background: orange;
+                color: white;
+            }
+            #myBtn {
+                display: none;
+                position: fixed;
+                bottom: 20px;
+                right: 30px;
+                z-index: 99;
+                font-size: 18px;
+                border: none;
+                outline: none;
+                background-color: cornflowerblue;
+                color: white;
+                cursor: pointer;
+                padding: 15px;
+                box-shadow: 10px 10px 5px grey;
+                border-radius: 4px;
+            }
+            #myBtn:hover {
+                background-color: orange;
+            }
+            .map{
+                position: relative;
+                padding-bottom: 30%;
+                height: 0;
+                overflow: hidden;
+                box-shadow: 10px 10px 5px grey;
+            }
+            .map > iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100% !important;
+                height: 100% !important;
+            }
+        </style>
+    </head>
+    <body>
+
+        <script>
+
+            window.onscroll = function () {
+                scrollFunction();
+            }
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 ||
+                    document.documentElement.scrollTop > 20) {
+                    document.getElementById("myBtn").style.display = "block";
+                }
+                else {
+                    document.getElementById("myBtn").style.display = "none";
+                }
+            }
+
+            function topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            }
+
+        </script>
+
+        <div class="navbar">
+            <a href="https://www.fazland.com/">Fazland</a>
+            <div class="navbarDx">
+                <a href="#home">Info</a>
+                <a href="#http">HTTP</a>
+            </div>
+        </div><br>
+        <!--<img src="Foto/background.jpg" style="height: 100%; width: 100%;">-->
+        <div id="home">
+            <img src="Foto/imge.png">
+            <h3>Esperienza di Alternanza Scuola-Lavoro</h3>
+            <div id="info">
+                <p style="color: white">Chi? --> Leonardo Bertazzoni</p>
+                <p style="color: white">Dove? --> Midnight Call S.R.L. (Fazland)</p>
+                <p style="color: white">Quando? --> dal 21/05 al 29/06</p>
+            </div><br>
+            <p>Mi chiamo Leonardo Bertazzoni, ho 18 anni e frequento la 4^ superiore
+                dell' IIS Blaise Pascal (BUS).</p>
+            <p>Quest'anno la mia scuola, come progetto di ASL,
+                ha organizzato uno stage in varie aziende.
+                Io con altri due miei compagni sono stato
+                assegnato alla StartUp emergente chiamata <b>Fazland</b>
+                per il periodo che va dal 21/05/18 al 29/06/18.</p>
+            <p>Nella <b>prima settimana</b> di stage abbiamo dovuto studiare ed approfondire
+                il protocollo <b>HTTP</b> <a href="#http">(leggi qui)</a>
+                per poi riuscire a mettere mano ai programmi dell'azienda.</p>
+        </div><br>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11345.308806195031!2d10.6335831!3d44.6925183!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2dc206a1021b5ab7!2sMidnight+Call+srl!5e0!3m2!1sit!2sit!4v1527157383637"
+            width="1000" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+        <br><br><hr><br><br>
+        <div id="http">
+            <h1>H(yper)T(ext) T(ransfer) P(rotocol)</h1>
+            <button onclick="topFunction()" id="myBtn">Torna su</button>
+            <p>Il protocollo HTTP e' un protocollo che consente il recupero dei dati.
+                Permette la comunicazione tra client e server tramite
+                dei messaggi testuali (e non binari).
+                Un server HTTP generalmente resta in ascolto delle richieste dei client sulla porta 80 usando il protocollo TCP a livello di trasporto.
+                Questi 2 sono divisi tra loro da 2 proxy
+                (uno per il client e l'altro per il server), componenti intermediari
+                usati per navigare tra reti diverse nell'internet (come il gateway), Nell'uso comune il client corrisponde al browser
+                ed il server alla macchina su cui risiede il sito web.</p>
+            <img src="Foto/foto1.png">
+            <p> La natura senza stato (<b>stateless</b>) della sessione di navigazione dell'HTTP costringe
+                gli sviluppatori di contenuti web ad utilizzare dei metodi alternativi,
+                <b>i cookie</b>, per conservare lo stato dell'utente, ma cio' che rende migliore questo protocollo rispetto ad altri e' il fatto che
+                le connessioni vengono generalmente chiuse una volta che una particolare richiesta (o una serie di richieste correlate)
+                e' stata soddisfatta, diminuendo cosi' il numero di connessioni attive limitandole a quelle effettivamente necessarie, con aumento quindi di efficienza
+                (minor carico e occupazione) sia sul client che sul server.</p>
+            <p>Client e server comunicano tra loro tramite messaggi,
+                <b>request</b> per quello mandato dal client
+                e <b>response</b> per quello mandato dal server.</p>
+            <h2>1. Request</h2>
+            <img src="Foto/foto2.png">
+            <p>E' costituita da una parte di metodo o verbo seguito dalla versione
+                del protocollo separati da /. Si puo' anche inserire una parte di
+                header che costituisce ulteriori informazioni per il server.</p>
+            <h3>Metodi</h3>
+            <p>sono utilizzati per indicare l'azione che si vuole compiere.
+                Ci sono vari metodi come ad esempio: get, head, post, options e trace.</p>
+            <p><b>GET</b> --> serve per "prendere" delle informazioni da un server.
+                Vengono fornite di risposta dal server le informazioni riguardanti
+                il collegamento e la pagina html (il body).</p>
+            <img src="Foto/foto3.png">
+            <p><b>HEAD</b> --> molto simile al metodo get tranne per il fatto che non
+                e' riportato il contenuto della pagina html.</p>
+            <img src="Foto/foto4.png">
+            <p><b>POST</b> --> serve per aggiungere dati al server</p>
+            <img src="Foto/foto5.png">
+            <p><b>OPTIONS</b> --> serve per chiedere al server quali metodi supporta</p>
+            <img src="Foto/foto6.png"><br><img src="Foto/foto7.png">
+            <p><b>TRACE</b> --> serve per chiedere al server di restituire
+                una diagnostica</p>
+            <img src="Foto/foto8.png"><br><img src="Foto/foto9.png">
+            <h3>Header</h3>
+            <p>Parte di testo non obbligatoria nella quale client e server
+                aggiungono informazioni nei request/response.
+                Consiste in un nome (key) segiuto da : e il suo valore
+                (i vari campi sono separati tra loro dall'a capo).
+                Sono moltissimi e divisi tra loro in base alla funzionalita'.</p>
+            <h2>2. Response</h2>
+            <img src="Foto/foto10.png">
+            <h3>Status Code</h3>
+            <p>Nel messaggio spedito dal server viene detto se il request e'
+                stato correttamente inviato e quindi accettato o se la comunicazione
+                e' andata a buon fine, in ogni caso viene detto lo stato della connessione.
+                Gli status codes sono divisi in 5 gruppi (basti sulle centinaia) e sono:
+                richiesta ricevuta, continua l'elaborazione -  <b>informational responses (100)</b>;
+                l'azione e' stata ricevuta con successo, compresa ed accettata - <b>successful responses (200)</b>;
+                il client deve eseguire ulteriori azioni per soddisfare la richiesta - <b>redirects (300)</b>;
+                la richiesta e' sintatticamente scorretta o non puo' essere soddisfatta - <b>client errors (400)</b>;
+                il server ha fallito nel soddisfare una richiesta apparentemente valida - <b>servers errors (500)</b>.</p>
+            <h4>Alcuni dei piu' comuni:</h4>
+            <ul>
+                <li><b>200 OK</b> --> la richiesta ha avuto successo </li>
+                <li><b>400 Bad Request</b> --> il server non capisce la richiesta per via della sintessai errata</li>
+                <li><b>404  Not Found</b> --> il server non trova la risorsa richiesta (nel browser l'URL non e' riconosciuto).</li>
+                <li><b>500 Internal Server Error</b> --> server incontra una situazione che non sa come gestire</li>
+                <li><b>503 Service Unavaible</b> --> il server non e' in grado di soddisfare la richiesta</li>
+            </ul>
+            <br><br><hr><br><br>
+        </div>
+    </body>
+</html>
